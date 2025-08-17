@@ -134,6 +134,9 @@ body {
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 30%, var(--dark-blue) 70%, black 100%);
   position: relative;
   overflow: hidden;
+  background-image: url("file:///home/electron/Desktop/github/SpeedCouriers//images/back.png");
+  background-size: cover;
+  
 }
 
 .hero::before {
@@ -145,6 +148,31 @@ body {
   height: 200%;
   background: radial-gradient(circle, rgba(255, 204, 0, 0.15) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
+}
+.hero-text{
+  position: relative;
+}
+.hero-back{
+  position: absolute;
+  inset: 0;
+  background: inherit; /* or use a background-image here */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+
+  /* Gradient mask to fade edges */
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 120%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 120%
+  );
+
+  z-index: -1;
 }
 
 .hero-content {
